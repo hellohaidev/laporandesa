@@ -102,6 +102,15 @@ class Dashboard extends CI_Controller {
             }
         }
 
+        public function generateReportPDF()
+        {
+            $data['report_pdf'] = $this->report_model->get_all_report();
+            $html = $this->load->view('dashboard/report/generatePDF',$data,true);
+			 $this->load->library('m_pdf');
+			 $this->m_pdf->pdf->WriteHTML($html);
+			 $this->m_pdf->pdf->Output('test.pdf','I');
+        }
+
 
 
 }

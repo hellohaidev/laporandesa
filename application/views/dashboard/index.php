@@ -42,7 +42,9 @@
             <div class="u-shadow-v1-5 g-line-height-2 g-pa-40 g-mb-30 text-center" role="alert">
                 <h3 class="h2 g-font-weight-300 g-mb-20">Report</h3>
                 <p class="mb-0">
-                    <i class="fas fa-file-pdf fa-5x" style="color:red;"></i>
+                    <a href="<?php echo base_url() ?>Dashboard/generateReportPDF">
+                        <i class="fas fa-file-pdf fa-5x" style="color:red;"></i>
+                    </a>
                 </p>
             </div>
             <!-- End Box Shadow -->
